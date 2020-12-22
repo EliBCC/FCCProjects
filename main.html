@@ -1,0 +1,80 @@
+<html>
+    <head>
+        <title>FreeCodeCamp - Helping Hand Product Page</title>
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body>
+        <header id="header">
+            <img  id="header-img" alt="Logo" src="https://challengepost-s3-challengepost.netdna-ssl.com/photos/production/software_photos/000/909/372/datas/original.jpg">
+            <nav id="nav-bar">
+
+                <a href="#main">
+                    <div class="nav-link">
+                    Home
+                    </div>
+                </a>
+
+                <a href="#about">
+                    <div class="nav-link">
+                        About us
+                    </div>
+                </a>
+
+                <a href="#contact">
+                    <div class="nav-link">
+                        Contact us
+                    </div>
+                </a>
+            </nav>
+        </header>
+        <div id="main">
+            <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/U9rnUuT0W4U" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <h1 id="about">
+                About us
+            </h1>
+            <h2>Inspiration</h2>
+            MISSION: Our mission is to create an intuitive and precisely controlled arm for situations that are tough or dangerous for humans to be in.
+
+            VISION: This robotic arm application can be used in the medical industry, disaster relief, and toxic environments.
+
+            <h2>What it does</h2>
+            The arm imitates the user in a remote destination. The 6DOF range of motion allows the hardware to behave close to a human arm. This would be ideal in environments where human life would be in danger if physically present.
+
+            The HelpingHand can be used with a variety of applications, with our simple design the arm can be easily mounted on a wall or a rover. With the simple controls any user will find using the HelpingHand easy and intuitive. Our high speed video camera will allow the user to see the arm and its environment so users can remotely control our hand.
+
+            <h2>How I built it</h2>
+            The arm is controlled using a PWM Servo arduino library. The arduino code receives control instructions via serial from the python script. The python script is using opencv to track the user's actions. An additional feature use Intel Realsense and Tensorflow to detect and track user's hand. It uses the depth camera to locate the hand, and use CNN to identity the gesture of the hand out of the 10 types trained. It gave the robotic arm an additional dimension and gave it a more realistic feeling to it.
+
+            <h2>Challenges I ran into</h2>
+            The main challenge was working with all 6 degrees of freedom on the arm without tangling it. This being a POC, we simplified the problem to 3DOF, allowing for yaw, pitch and gripper control only. Also, learning the realsense SDK and also processing depth image was an unique experiences, thanks to the hardware provided by Dr. Putz at the nwhacks.
+
+            <h2>Accomplishments that I'm proud of</h2>
+            This POC project has scope in a majority of applications. Finishing a working project within the given time frame, that involves software and hardware debugging is a major accomplishment.
+
+            <h2>What I learned</h2>
+            We learned about doing hardware hacks at a hackathon. We learned how to control servo motors and serial communication. We learned how to use camera vision efficiently. We learned how to write modular functions for easy integration.
+
+            <h2>What's next for The Helping Hand</h2>
+            Improve control on the arm to imitate smooth human arm movements, incorporate the remaining 3 dof and custom build for specific applications, for example, high torque motors would be necessary for heavy lifting applications.
+            
+            <h1 id="contact">
+                Contact us
+            </h1>
+            <form id="form" action="https://freecatphotoapp.com/submit-cat-photo">
+                <input id="email" type="email" placeholder="email@domain.ca" required>
+                <textarea>
+                    Enter your message here
+                </textarea>
+                <a href="https://www.freecodecamp.com/email-submit">
+                    <input name="submit" id="submit" type="submit">
+                </a>
+            </form>
+        </div>
+    </body>
+</html>
+
+<!--
+    [] Navbar always at top
+    [] Media query
+    [] Flexbox
+-->
