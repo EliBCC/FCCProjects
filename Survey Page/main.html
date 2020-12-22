@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title>FreeCodeCamp - Survey Page</title>
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body>
+        <div id="main">
+            <h1 id="title">Student Sustainability Newsletter Signup</h1>
+            <p id="description">A weekly newsletter about on-campus eco-projects,
+                sustainability tips, and environmental news in B.C. and the world.
+            </p>
+            <form id="survey-form" action="https://freecatphotoapp.com/submit-cat-photo">
+                <p id="name-label">Please enter your name:</p>
+                <input id="name" type="text" placeholder="First Last" required>
+                <p id="name-label">Please enter your email:</p>
+                <input id="email" type="email" placeholder="email@domain.ca" required>
+                <p id="name-label">Please enter you phone number (optional):</p>
+                <input id="number" type="number" placeholder="1234567890" min="1000000000" max="9000000000">
+                <p id="radio-label">Please select your association with the university:</p>
+                <label for="Student">
+                    <input id="Student" type="radio" name="affiliation"> Student
+                </label>
+                <label for="Staff">
+                    <input id="Staff" type="radio" name="affiliation"> Staff
+                </label>
+                <label for="Faculty">
+                    <input id="Faculty" type="radio" name="affiliation"> Faculty
+                </label>
+                <p id="check-label">Please select which type of news you would like to recieve:</p>
+                <label for="Campus">
+                    <input id="Campus" type="checkbox" name="interests"> Campus News
+                </label>
+                <label for="Tips">
+                    <input id="Tips" type="checkbox" name="interests"> Sustainability Tips
+                </label>
+                <label for="World">
+                    <input id="World" type="checkbox" name="interests"> World News
+                </label>
+                <p id="comments">Please enter any additional comments you have:</p>
+                <textarea id="textarea">
+                    I'd love to see...
+                    There's a problem with this form...
+                </textarea>
+                <div class="dropdown">
+                    <button type="submit">Submit</button>
+                    <div class="dropdown-content">
+                        <button class="save">Save</button>
+                        <button class="quit">Quit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>

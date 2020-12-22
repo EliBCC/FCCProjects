@@ -1,0 +1,26 @@
+body {
+    overflow-x: hidden;
+    background-color: green;
+}
+
+#main{
+    width: 65%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 15%;
+    padding-left: 15%;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 15%;
+    padding-bottom: 15%;
+    background-color: rgb(242,255,242);
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    z-index: 1;
+  }
+
+  .dropdown:hover .dropdown-content {display: block;}
