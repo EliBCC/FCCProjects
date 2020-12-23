@@ -1,0 +1,72 @@
+body{
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+#page{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+#navbar{
+    width: 200px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+
+    border-right: 1px solid;
+    
+    background-color: white;
+
+    position: fixed;
+}
+
+#nav-header{
+    font-size: large;
+    height: 110px;
+}
+
+.nav-link{
+    color: black;
+    font-style: normal;
+}
+
+.nav-button{
+    height: 40px;
+    line-height: 40px;
+    width: 100%;
+    
+    border-top: 1px solid;
+    
+    background-color: white;
+}
+
+#main-doc{
+    padding-left: 215px;
+}
+
+.main-section{
+    border-bottom: 1px solid;
+
+    padding-bottom: 5px;
+}
+
+.nav-button:hover{
+    background-color: rgb(194, 194, 194);
+}
+
+@media (max-width: 300px) {
+    #page{
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    #main-doc{
+      padding-left: 0px;
+    }
+    #navbar{
+        position: static;
+        width: 100%;
+    }
+}

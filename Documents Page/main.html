@@ -1,0 +1,158 @@
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+<!-- 
+
+Hello Camper!
+
+For now, the test suite only works in Chrome! Please read the README below in the JS Editor before beginning. Feel free to delete this message once you have read it. Good luck and Happy Coding! 
+
+- The freeCodeCamp Team 
+
+-->
+
+<html>
+    <head>
+        <title>FreeCodeCamp: Technical Document</title>
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body>
+        <div id=page>
+            <div>
+                <nav id=navbar>
+                    <header id="nav-header">
+                        <h1>Matlab Reference Guide</h1>
+                        A useful reference guide to plotting in Matlab
+                    </header>
+                    <a href="#IO" class="nav-link">
+                        <div class="nav-button">
+                            IO
+                        </div>
+                    </a>
+                    <a href="#Title" class="nav-link">
+                        <div class="nav-button">
+                            Title
+                        </div>
+                    </a>
+                    <a href="#Legend" class="nav-link">
+                        <div class="nav-button">
+                            Legend
+                        </div>
+                    </a>
+                    <a href="#Color" class="nav-link">
+                        <div class="nav-button">
+                            Color
+                        </div>
+                    </a>
+                    <a href="#Phasor" class="nav-link">
+                        <div class="nav-button">
+                            Phasor
+                        </div>
+                    </a>
+                </nav>
+            </div>
+            <div>
+                <main id="main-doc">
+                    <section class="main-section" id="IO">
+                        <header>
+                            <h2>IO</h2>
+                        </header>
+                        <p>
+                        To import data from a csv, use the following: 
+                        </p>
+                        <p>
+                            <code>
+                                A = importdata(filename)
+                                Col1Header = A.colheaders{1, 1}
+                                Col1Data = A.data(:, 1)
+                            </code>
+                        </p>
+                    </section>
+                    <section class="main-section" id="Title">
+                        <header>
+                            <h2>Title</h2>
+                        </header>
+                        <p>
+                            To add a title, use the following:
+                        </p>
+                        <p>
+                            <code>
+                                title("Task 5C: Phasor");
+                            </code>
+                        </p>
+                    </section>
+                    <section class="main-section" id="Legend">
+                        <header>
+                            <h2>Legend</h2>
+                        </header>
+                        <p>
+                            To make a legend, use the following:
+                        </p>
+                        <p>
+                            <code>
+                                legend({"V1","V2","V3","I1","I2","I3"});
+                            </code>
+                        </p>
+                    </section>
+                    <section class="main-section" id="Color">
+                        <header>
+                            <h2>Color</h2>
+                        </header>
+                        <p>
+                            To change the color, use the following:
+                        </p>
+                        <code>
+                            ca(1).Color="r";
+                        </code>
+                        <p>
+                            Possible colors are:
+                        </p>
+                        <ul>
+                            <li>
+                                'r' - Red
+                            </li>
+                            <li>
+                                'g' - Green
+                            </li>
+                            <li>
+                                'c' - Cyan
+                            </li>
+                            <li>
+                                'm' - Magenta
+                            </li>
+                            <li>
+                                'y' - Yellow
+                            </li>
+                            <li>
+                                'k' - Black
+                            </li>
+                            <li>
+                                'w' - White
+                            </li>
+                            <li>
+                                'none' - N/A
+                            </li>
+                        </ul>
+                    </section>
+                    <section class="main-section" id="Phasor">
+                        <header>
+                            <h2>Phasor</h2>
+                        </header>
+                        <p>
+                            To make a phasor diagram, use the following:
+                        </p>
+                        <p>
+                            <code>
+                                phsr1 = [4.008 59.935; 7.086 27.616; 7.75 14.37];
+                                phsr2 = [5.99 -30.07; 3.716 -62.32; 1.946 -75.92];
+                                figure(1)
+                                compass(phsr1(:,1).*cosd(phsr1(:,2)), phsr1(:,1).*sind(phsr1(:,2)))
+                                figure(2)
+                                compass(phsr2(:,1).*cosd(phsr2(:,2)), phsr2(:,1).*sind(phsr2(:,2)))
+                            </code>
+                        </p>
+                    </section>
+                </main>
+            </div>
+        </div>
+    </body>
+</html>
